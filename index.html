@@ -25,7 +25,7 @@
                     <label name="l2" for="">Enter your email : </label>
                     <input type="text" id="email" class="form-control" placeholder="Enter email...">
                     <br>
-                    <label name="l3" for="">Leave a message : </label>
+                    <label name="l3" for="">Leave us a message : </label>
                     <textarea id="textarea" class="form-control" placeholder="Enter message..."></textarea>
                     <br>
                     <div class="card">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <br>
-                    <button id="clear" class="btn btn-danger">Clear All</button>
+                    <button id="clear" class="btn btn-danger">Clear Database</button>
                 </div>
             </div>
         </div>
@@ -83,12 +83,13 @@
                     if(data.length){
                         for(var x = 0;x < data.length;x++){
                              
+                            
                             var message = document.createElement('div');
                             message.setAttribute('class', 'chat-message');
-                            message.textContent ="*Name* :"+data[x].name+"      *Email* :"+data[x].email+"      *Message*"+data[x].message;
-                            message.appendChild(message);
-                            message.insertBefore(message, messages.firstChild);
-                            
+                            message.textContent = "*Name* :"+data[x].name+"*Email* :"+data[x].email+"*Message* :"+data[x].message;
+                            messages.appendChild(message);
+                            messages.insertBefore(message, messages.firstChild);
+                       
                         }
                     }
                 });
