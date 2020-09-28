@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <title>CHAT APP</title>
+    <link rel="stylesheet" href="sty.css">
+    <title>Chat Bot Application</title>
     <style>
-        #messages{height:300px;}
+        #messages{height:500px;}
     </style>
 </head>
 <body>
@@ -19,6 +20,7 @@
                 </h1>
                 <div id="status"></div>
                 <div id="chat">
+                    <br>
                     <label name="l1" for="">Enter your name : </label>
                     <input type="text" id="username" class="form-control" placeholder="Enter name...">
                     <br>
@@ -86,7 +88,7 @@
                             
                             var message = document.createElement('div');
                             message.setAttribute('class', 'chat-message');
-                            message.textContent = "*Name* :"+data[x].name+"*Email* :"+data[x].email+"*Message* :"+data[x].message;
+                            message.innerHTML = "<br>*Name* :"+data[x].name+"<br>*Email* :"+data[x].email+"<br>*Message* :"+data[x].message;
                             messages.appendChild(message);
                             messages.insertBefore(message, messages.firstChild);
                        
